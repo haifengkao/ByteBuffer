@@ -12,8 +12,8 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Dispatch
-import _NIOBase64
+//import Dispatch
+//import _NIOBase64
 
 extension ByteBuffer {
 
@@ -267,7 +267,8 @@ extension ByteBuffer {
             return self.setString(String(substring), at: index)
         }
     }
-    
+
+    /*
     // MARK: DispatchData APIs
     /// Write `dispatchData` into this `ByteBuffer`, moving the writer index forward appropriately.
     ///
@@ -332,7 +333,7 @@ extension ByteBuffer {
         self._moveReaderIndex(forwardBy: length)
         return result
     }
-
+    */
 
     // MARK: Other APIs
 
@@ -660,6 +661,7 @@ extension ByteBuffer {
         self = ByteBufferAllocator().buffer(buffer: buffer)
     }
 
+    /*
     /// Create a fresh `ByteBuffer` containing the bytes contained in the given `DispatchData`.
     ///
     /// This will allocate a new `ByteBuffer` with enough space to fit the bytes of the `DispatchData` and potentially
@@ -673,7 +675,7 @@ extension ByteBuffer {
     @inlinable
     public init(dispatchData: DispatchData) {
         self = ByteBufferAllocator().buffer(dispatchData: dispatchData)
-    }
+    }*/
 }
 
 extension ByteBuffer: Codable {
@@ -785,6 +787,7 @@ extension ByteBufferAllocator {
         return newBuffer
     }
 
+    /*
     /// Create a fresh `ByteBuffer` containing the bytes contained in the given `DispatchData`.
     ///
     /// This will allocate a new `ByteBuffer` with enough space to fit the bytes of the `DispatchData` and potentially
@@ -797,6 +800,7 @@ extension ByteBufferAllocator {
         buffer.writeDispatchData(dispatchData)
         return buffer
     }
+    */
 }
 
 
