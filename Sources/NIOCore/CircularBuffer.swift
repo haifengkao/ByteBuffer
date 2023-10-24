@@ -77,10 +77,7 @@ public struct CircularBuffer<Element>: CustomStringConvertible {
             self.isIndexGEQHeadIndex = backingIndex >= backingIndexOfHead
             self._backingCheck = .max
             self._backingIndex = UInt32(backingIndex)
-            debugOnly {
-                // if we can, we store the check for the backing here
-                self._backingCheck = backingCount < Int(_UInt24.max) ? _UInt24(UInt32(backingCount)) : .max
-            }
+            
         }
 
         @inlinable
