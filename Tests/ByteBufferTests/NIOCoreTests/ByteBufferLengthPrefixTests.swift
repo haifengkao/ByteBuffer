@@ -12,7 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-import NIOCore
+import ByteBuffer
 import XCTest
 
 final class ByteBufferLengthPrefixTests: XCTestCase {

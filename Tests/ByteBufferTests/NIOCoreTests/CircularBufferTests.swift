@@ -13,7 +13,7 @@
 //===----------------------------------------------------------------------===//
 
 import XCTest
-@testable import NIOCore
+@testable import ByteBuffer
 
 class CircularBufferTests: XCTestCase {
     func testTrivial() {
@@ -1061,5 +1061,11 @@ class CircularBufferTests: XCTestCase {
         XCTAssertEqual(buffer.count, 3)
         XCTAssertGreaterThan(buffer.headBackingIndex, buffer.tailBackingIndex)
         XCTAssertEqual(Array(buffer), ["b", "c", "d"])
+    }
+}
+
+extension TimeInterval {
+    static func seconds(_ value: Double) -> TimeInterval {
+        return value
     }
 }
