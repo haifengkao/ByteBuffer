@@ -12,7 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Dispatch
+//import Dispatch
 
 extension Array where Element == UInt8 {
     
@@ -48,8 +48,9 @@ extension String {
     }
 }
 
+/*
 extension DispatchData {
-    
+
     /// Creates a `DispatchData` from a given `ByteBuffer`. The entire readable portion of the buffer will be read.
     /// - parameter buffer: The buffer to read.
     @inlinable
@@ -57,5 +58,6 @@ extension DispatchData {
         var buffer = buffer
         self = buffer.readDispatchData(length: buffer.readableBytes)!
     }
-    
+
 }
+*/
